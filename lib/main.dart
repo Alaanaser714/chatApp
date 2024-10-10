@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/auth_feature/presentation/view/splash/splash_view.dart';
+import 'features/splash/presentation/view/splash_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-         home: SplashView(),
-         );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        fontFamily: "Inter",
+        useMaterial3: true,
+      ),
+      home: const SplashView(),
+    );
   }
 }

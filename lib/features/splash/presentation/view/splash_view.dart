@@ -4,7 +4,8 @@ import 'package:chat_app/core/constant/assets_images.dart';
 import 'package:chat_app/core/themes/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/themes/colorsapp.dart';
+import '../../../../core/themes/colorsapp.dart';
+import '../../../auth_feature/login/presentation/view/login_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -14,17 +15,17 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-  // @override
-  // void initState() {
-  //   Future.delayed(Duration(seconds: 3), () {
-  //     Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //           builder: (context) => LoginView(),
-  //         ));
-  //   });
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => LoginView(),
+          ));
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
